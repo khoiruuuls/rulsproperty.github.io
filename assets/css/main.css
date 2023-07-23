@@ -533,7 +533,7 @@ h6 {
 	}
 
 	.navbar li:first-child {
-		padding-top: 30px;
+		padding-top: 50px;
 	}
 
 	.navbar a:hover,
@@ -1762,11 +1762,11 @@ button:active {
 	text-align: justify;
 }
 
-.terraverde-unit {
+.monteverde-unit {
 	display: none;
 }
 
-.terraverde-unit.active {
+.monteverde-unit.active {
 	display: contents;
 }
 
