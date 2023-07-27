@@ -503,7 +503,7 @@ h6 {
 		inset: 0;
 		padding: 50px 0 10px 0;
 		margin: 0;
-		background: var(--color-gray);
+		background: var(--color-gray-background);
 		overflow-y: auto;
 		transition: 0.3s;
 		z-index: 9998;
@@ -530,10 +530,6 @@ h6 {
 		font-size: 12px;
 		line-height: 0;
 		margin-left: 5px;
-	}
-
-	.navbar li:first-child {
-		padding-top: 50px;
 	}
 
 	.navbar a:hover,
@@ -992,7 +988,7 @@ h6 {
 }
 
 .services .service-item i {
-	color: var(--color-background);
+	color: var(--color-primary);
 	font-size: 24px;
 	transition: 0.3s;
 	display: flex;
@@ -1772,4 +1768,8 @@ button:active {
 
 .room {
 	cursor: pointer;
+}
+
+.hello-box {
+	border: 1px solid black;
 }
