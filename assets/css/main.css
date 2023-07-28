@@ -1772,4 +1772,7 @@ button:active {
 
 .hello-box {
 	border: 1px solid black;
+	height: 300px;
+	width: auto;
+	border-radius: 10px;
 }

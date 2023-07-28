@@ -103,6 +103,9 @@
                 amenities but yet
                 suitably buffered from the hustle and bustle of the main thoroughfare</p>
             </div>
+            <button id="directionsBtn">
+              Get Direction
+            </button>
           </div>
         </div>
       </div>
@@ -119,7 +122,7 @@
               <h4>Hospitals</h4>
               <p></p>
               <li>MMC Hospital</li>
-              <li>Siloam Hospital</li>
+              <li>Mayapada Hospital</li>
               <li>Medistra Hospital</li>
             </div>
           </div><!-- End Service Item -->
@@ -131,7 +134,7 @@
               <p></p>
               <li>High Scope Indonesia</li>
               <li>Regality Academy</li>
-              <li>Mighty Minds</li>
+              <li>Kinderland Preschool</li>
             </div>
           </div><!-- End Service Item -->
 
@@ -152,8 +155,8 @@
               <h4>Shop</h4>
               <p></p>
               <li>Epicentrum Walk</li>
-              <li>Grand Indonesia</li>
-              <li>Plaza Indonesia</li>
+              <li>Kokas Mall</li>
+              <li>Lotte Mart</li>
             </div>
           </div><!-- End Service Item -->
 
@@ -212,6 +215,29 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script>
+    document.getElementById('directionsBtn').addEventListener('click', function () {
+      // Check if Geolocation is available in the user's browser
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          var destination = 'Verde Two Apartemen';
+          var url = 'https://www.google.com/maps/dir/?api=1&origin=' + latitude + ',' + longitude + '&destination=' + encodeURIComponent(destination);
+
+          window.open(url, '_blank');
+        }, function (error) {
+          console.log('Error getting the user\'s location:', error);
+          alert('Error getting your location. Please ensure you have allowed location access and try again.');
+        });
+      } else {
+        alert('Geolocation is not available in your browser. You can manually enter your starting location.');
+      }
+    });
+
+  </script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
